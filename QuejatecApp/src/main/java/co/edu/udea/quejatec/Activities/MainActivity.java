@@ -15,6 +15,8 @@ import android.view.MenuItem;
 
 import co.edu.udea.quejatec.Fragments.FragmentPerfil;
 import co.edu.udea.quejatec.Fragments.FragmentoCuenta;
+import co.edu.udea.quejatec.Fragments.ListSolicitudesFragment;
+import co.edu.udea.quejatec.Fragments.SolicitudFragment;
 import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
 
@@ -32,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle extras=getIntent().getExtras();
 
-        usuario=(Usuario)extras.getParcelable("Usuario");
+        usuario=extras.getParcelable("Usuario");
 
         setToolbar();
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -60,27 +62,34 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void seleccionarItem(MenuItem itemDrawer) {
-        FragmentoCuenta fragmentoGenerico = null;
+        FragmentoCuenta fragmentoCuenta = null;
+        ListSolicitudesFragment fragmentoSolicitud = null;
         FragmentManager fragmentManager = getSupportFragmentManager();
 
         switch (itemDrawer.getItemId()) {
 
             case R.id.item_cuenta:
-                fragmentoGenerico = new FragmentoCuenta();
-
+                fragmentoCuenta = new FragmentoCuenta();
                 break;
-           /* case R.id.item_solicitudes:
-                fragmentoGenerico = new FragmentoCategorias();
+           case R.id.item_solicitudes:
+                getIntent().putExtra("Usuario",usuario);
+                fragmentoSolicitud = new ListSolicitudesFragment();
                 break;
-            case R.id.item_configuracion:
+          /*  case R.id.item_configuracion:
                 startActivity(new Intent(this, ActividadConfiguracion.class));
                 break;*/
         }
-        if (fragmentoGenerico != null) {
-            fragmentoGenerico.setUserLoged(usuario);
+        if (fragmentoCuenta != null) {
+            fragmentoCuenta.setUserLoged(usuario);
             fragmentManager
                     .beginTransaction()
-                    .replace(R.id.main_content, fragmentoGenerico)
+                    .replace(R.id.main_content, fragmentoCuenta)
+                    .commit();
+        }
+        if (fragmentoSolicitud != null) {
+            fragmentManager
+                    .beginTransaction()
+                    .replace(R.id.main_content, fragmentoSolicitud)
                     .commit();
         }
 

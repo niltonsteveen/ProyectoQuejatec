@@ -34,14 +34,6 @@ public class FragmentoCuenta extends Fragment {
         return usuario;
     }
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
-    public FragmentoCuenta(Usuario user) {
-        this.usuario=user;
-    }
-
     public FragmentoCuenta( ) {
 
     }

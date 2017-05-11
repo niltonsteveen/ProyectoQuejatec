@@ -22,7 +22,8 @@
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.Main_content" />
         <activity android:name=".Activities.HeaderDrawer" />
-        <activity android:name=".Activities.MenuDrawer"></activity>
+        <activity android:name=".Activities.MenuDrawer" />
+        <activity android:name=".Activities.EditPerfil"></activity>
     </application>
 
 </manifest>

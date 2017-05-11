@@ -1,5 +1,6 @@
 package co.edu.udea.quejatec.Fragments;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,6 +14,7 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import co.edu.udea.quejatec.Activities.EditPerfil;
 import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
 import co.edu.udea.quejatec.utils.UtilClass;
@@ -20,13 +22,14 @@ import co.edu.udea.quejatec.utils.UtilClass;
 
 public class FragmentPerfil extends Fragment {
     private Usuario usuario;
-    private GridLayout grid;
     private TextView tvNombre;
     private TextView tvDocumento;
     private TextView tvPassword;
     private TextView tvEmail;
     private TextView tvContacto;
     private TextView tvDireccion;
+    private ImageView icono_indicador_derecho;
+    private TextView texto_edit;
 
     public FragmentPerfil() {
 
@@ -63,7 +66,31 @@ public class FragmentPerfil extends Fragment {
         String pwd=UtilClass.hidePassword(usuario.getPassword().length());
         tvPassword.setText(pwd);
 
+        icono_indicador_derecho=(ImageView) view.findViewById(R.id.icono_indicador_derecho);
+        texto_edit=(TextView)view.findViewById(R.id.texto_edit);
+
+        icono_indicador_derecho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                actualizar();
+            }
+        });
+
+        texto_edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                actualizar();
+            }
+        });
+
         return view;
 
+    }
+
+    public void actualizar(){
+        Intent intent=new Intent(getActivity(), EditPerfil.class);
+        intent.putExtra("Usuario",usuario);
+        getActivity().startActivity(intent);
     }
 }

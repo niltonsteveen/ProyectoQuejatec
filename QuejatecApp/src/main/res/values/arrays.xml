@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tipo_solicitudes">
+        <item>Queja</item>
+        <item>Peticion</item>
+        <item>Reclamo</item>
+    </string-array>
+
+    <string-array name="sucursales">
+        <item>Medellín</item>
+        <item>Bogotá</item>
+        <item>Manizales</item>
+        <item>Barranquilla</item>
+    </string-array>
+</resources>

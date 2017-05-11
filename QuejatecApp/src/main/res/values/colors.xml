@@ -26,5 +26,6 @@
     <color name="background_header_seccion_inicio">#4B4B4B</color>
 
     <color name="windowbackground">#ffffff</color>
+    <color name="green_fluo">#76FF03</color>
 
 </resources>

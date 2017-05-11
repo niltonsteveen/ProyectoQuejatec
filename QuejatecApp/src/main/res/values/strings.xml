@@ -50,4 +50,8 @@
     <string name="edit">Editar Perfil</string>
     <string name="titulo_tab_targetas">Medios de Pago</string>
     <string name="no_asignada">No tiene tarjetas asociadas</string>
+    <string name="editarPerfil">Editar Perfil</string>
+    <string name="Actualizar">Actualizar</string>
+    <string name="crearpqr">Crear PQR</string>
+    <string name="Insertar">Generar Solicitud</string>
 </resources>
