@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="window_background">#90CD16</color>
+    <color name="backImg">#103FAB</color>
+    <color name="backCircle">#9FF781</color>
+    <color name="backImg2">#97CEEC</color>
+    <color name="green_light">#C3EF6A</color>
+    <item name="primary" type="color">#70A309</item>
+    <item name="primaryDark" type="color">#00602D</item>
+    <item name="indigo" type="color">#7C4DFF</item>
+    <item name="teal" type="color">#BBDEFB</item>
+    <item name="orange" type="color">#FF5722</item>
+    <item name="letter" type="color">#ffffff</item>
+    <item name="black" type="color">#212121</item>
+    <item name="accent" type="color">#ECE144</item>
+    <item name="light" type="color">#C3EF6A</item>
+    <item name="light2" type="color">#A9DD40</item>
+    <item name="light3" type="color">#FFF571</item>
+    <item name="accent2" type="color">#547E00</item>
+    <item name="hint2" type="color">#877E00</item>
+
+    <color name="background_footer_item_grid_categorias">#90000000</color>
+
+    <color name="color_light">#ffffff</color>
+
+    <color name="background_header_seccion_inicio">#4B4B4B</color>
+
+    <color name="windowbackground">#ffffff</color>
+
+</resources>

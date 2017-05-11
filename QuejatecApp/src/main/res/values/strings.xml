@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">QuejaTec</string>
+    <string name="username">Nombre de usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Ingresar</string>
+    <string name="registro">Regístrate</string>
+    <string name="pregunta">¿No tienes una cuenta?</string>
+    <string name="email">Correo Electrónico</string>
+    <string name="lastName">Apellidos</string>
+    <string name="names">Nombres</string>
+    <string name="direction">Dirección</string>
+    <string name="Título">Formulario de Registro</string>
+    <string name="configuracion">Configuraciones</string>
+    <string name="nuevasol">Crear Solicitud</string>
+    <string name="notifications">Mis solicitudes</string>
+    <string name="perfil">Perfil</string>
+    <string name="logout">Cerrar Sesión</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_user">Crear Usuario</string>
+    <string name="notifications1">Notificaciones</string>
+    <string name="Usuarios">Usuarios</string>
+    <string name="info">Información</string>
+    <string name="tiposol">Tipo de solicitud</string>
+    <string name="description">Descripción</string>
+    <string name="sucursal">Sucursal:</string>
+    <string name="responder">RESPONDER</string>
+    <string name="ver">VER</string>
+    <string name="errorUsername">Nombre de usuario obligatorio</string>
+    <string name="errorPassword">Contraseña obligatoria</string>
+    <string name="errorEmail">Correo inválido</string>
+    <string name="errorGeneral">Campo obligatorio</string>
+    <string name="usernameExist">Usuario existente</string>
+    <string name="pwdIncorrect">Contraseña errónea</string>
+    <string name="crearCuenta">Crear Cuenta</string>
+    <string name="name">Nombre Completo</string>
+    <string name="contact">Número de contacto</string>
+    <string name="documento">Documento de identidad</string>
+    <string name="errorDocument">Debe ingresar un valor</string>
+    <string name="errorNumeric">Ingrese un campo numérico</string>
+    <string name="errorEmail1">El email es obligatorio</string>
+    <string name="errorName">El nombre es obligatorio</string>
+    <string name="errorContact">El numero es obligatorio</string>
+    <string name="longContact">Longitud minima es de 7 numeros</string>
+    <string name="errorUnicidad">Usuario existente</string>
+    <string name="titulo_tab_perfil">Informacion Personal</string>
+    <string name="titulo_tab_direcciones">ejemplo2</string>
+    <string name="info_user">Información de Usuario:</string>
+    <string name="edit">Editar Perfil</string>
+    <string name="titulo_tab_targetas">Medios de Pago</string>
+    <string name="no_asignada">No tiene tarjetas asociadas</string>
+</resources>
