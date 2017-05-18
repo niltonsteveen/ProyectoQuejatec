@@ -4,12 +4,12 @@
       <root url="jar://$PROJECT_DIR$/QuejatecApp/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/QuejatecApp/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/QuejatecApp/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.2.0/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/2946051a123aa563dd53a3200e2eb145673805fc/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/2946051a123aa563dd53a3200e2eb145673805fc/output/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
-      <root url="jar://$USER_HOME$/AppData/Local/Android/sdk/extras/android/m2repository/com/android/support/support-core-ui/25.2.0/support-core-ui-25.2.0-sources.jar!/" />
+      <root url="jar://$USER_HOME$/AppData/Local/Android/Sdk/extras/android/m2repository/com/android/support/support-core-ui/25.2.0/support-core-ui-25.2.0-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

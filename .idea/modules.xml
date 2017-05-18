@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/QuejaTec.iml" filepath="$PROJECT_DIR$/QuejaTec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProyectoQuejatec.iml" filepath="$PROJECT_DIR$/ProyectoQuejatec.iml" />
       <module fileurl="file://$PROJECT_DIR$/QuejatecApp/QuejatecApp.iml" filepath="$PROJECT_DIR$/QuejatecApp/QuejatecApp.iml" />
     </modules>
   </component>

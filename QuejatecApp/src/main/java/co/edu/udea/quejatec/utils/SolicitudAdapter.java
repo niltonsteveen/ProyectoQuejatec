@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import co.edu.udea.quejatec.Model.Solicitud;
 import co.edu.udea.quejatec.R;
 
 /**

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import co.edu.udea.quejatec.Model.RestInterface;
+import co.edu.udea.quejatec.Model.Solicitud;
 import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
 import co.edu.udea.quejatec.utils.SolicitudAdapter;
