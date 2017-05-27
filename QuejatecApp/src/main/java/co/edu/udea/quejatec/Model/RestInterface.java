@@ -30,7 +30,10 @@ public interface RestInterface {
     void updateUser(@Body Usuario user, Callback<Usuario> cb);
 
     @POST("/solicitudes")
-    void createSolicitud(@Body Solicitud solicitud, Callback<Usuario> cb);
+    void createSolicitud(@Body Solicitud solicitud, Callback<Solicitud> cb);
+
+    @PUT("/solicitudes")
+    void updateSolicitud(@Body Solicitud solicitud, Callback<Solicitud> cb);
 
     @GET("/solicitudes")
     void getSolicitudes(Callback<List<Solicitud>> cb) ;

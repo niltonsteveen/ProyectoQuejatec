@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import java.util.Date;
+
 import co.edu.udea.quejatec.Model.RestInterface;
 import co.edu.udea.quejatec.Model.Solicitud;
 import co.edu.udea.quejatec.Model.Usuario;
@@ -105,11 +107,13 @@ public class SolicitudFragment extends Fragment {
                 solicitud.setSucursal(String.valueOf(sucursal));
                 solicitud.setTiposolicitud(String.valueOf(tipoSolicitud));
                 solicitud.setUsuario(String.valueOf(user.getDocumento()));
-                restInterface.createSolicitud(solicitud, new Callback<Usuario>() {
+                Date fecha=new Date();
+                solicitud.setFechaCreacion(fecha.toString());
+                restInterface.createSolicitud(solicitud, new Callback<Solicitud>() {
                     @Override
-                    public void success(Usuario usuario, Response response) {
+                    public void success(Solicitud solicitud, Response response) {
                         Toast.makeText(getContext(), "Solicitud creada correctamente",Toast.LENGTH_LONG).show();
-                        ListSolicitudesFragment sFragment=new ListSolicitudesFragment();
+                        ListSolicitudesFragmentPend sFragment=new ListSolicitudesFragmentPend();
 
                         FragmentManager fragmentManager=getFragmentManager();
                         fragmentManager

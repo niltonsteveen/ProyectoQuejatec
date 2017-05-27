@@ -54,4 +54,8 @@
     <string name="Actualizar">Actualizar</string>
     <string name="crearpqr">Crear PQR</string>
     <string name="Insertar">Generar Solicitud</string>
+    <string name="editarSol">EDITAR</string>
+    <string name="respuesta">Ingresa tu respuesta</string>
+    <string name="titulo_tab_solicitudes_pendientes">Pendientes</string>
+    <string name="titulo_tab_solicitudes_ok">Finalizado</string>
 </resources>

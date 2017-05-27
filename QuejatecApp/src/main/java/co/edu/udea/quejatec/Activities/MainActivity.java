@@ -2,7 +2,6 @@ package co.edu.udea.quejatec.Activities;
 
 import android.content.Intent;
 import android.support.design.widget.NavigationView;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -10,20 +9,36 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-import co.edu.udea.quejatec.Fragments.FragmentPerfil;
-import co.edu.udea.quejatec.Fragments.FragmentoCuenta;
-import co.edu.udea.quejatec.Fragments.ListSolicitudesFragment;
-import co.edu.udea.quejatec.Fragments.SolicitudFragment;
+import com.google.firebase.iid.FirebaseInstanceId;
+
+import co.edu.udea.quejatec.Fragments.FragmentoTabs;
+import co.edu.udea.quejatec.Fragments.ListSolicitudesFragmentPend;
+import co.edu.udea.quejatec.Model.RestInterface;
 import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
+import co.edu.udea.quejatec.utils.MyFirebaseMessagingService;
+import co.edu.udea.quejatec.utils.RestClientBuilder;
+import retrofit.Callback;
+import retrofit.RetrofitError;
+import retrofit.client.Response;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
     private Usuario usuario;
+    private TextView tvEmailHeader;
+    private TextView tvNombreHeader;
+    private static final int item_inicio1= 1;
+    private static final int item_cuenta1= 2;
+    private static final int item_solicitudes1= 3;
+    private static final int item_configuracion1= 4;
+    private static final int item_usuarios1= 5;
+
 
     public MainActivity(){}
 
@@ -33,18 +48,67 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Bundle extras=getIntent().getExtras();
-
         usuario=extras.getParcelable("Usuario");
+
+       // Group group=(Group) findViewById(R.id.grupo1);
 
         setToolbar();
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView=null;
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
+        Menu menu=navigationView.getMenu();
+        if(usuario.getTipoUsuario().equals("1")){
+            menu.add(R.id.grupo1,item_inicio1,Menu.NONE, "Inicio").setChecked(true).setIcon(R.drawable.home).setCheckable(true);
+            menu.add(R.id.grupo1,item_cuenta1,Menu.NONE, "Perfil").setIcon(R.drawable.account).setCheckable(true);
+            menu.add(R.id.grupo1,item_solicitudes1,Menu.NONE, "Solicitudes").setIcon(R.drawable.belll).setCheckable(true);
+            menu.add(R.id.grupo1,item_configuracion1,Menu.NONE, "Configuración").setIcon(R.drawable.settings).setCheckable(true);
+        }else{
+            menu.add(R.id.grupo2,item_solicitudes1,Menu.NONE, "Solicitudes").setChecked(true).setIcon(R.drawable.home).setCheckable(true);
+            menu.add(R.id.grupo2,item_cuenta1,Menu.NONE, "Perfil").setIcon(R.drawable.account).setCheckable(true);
+            menu.add(R.id.grupo2,item_usuarios1,Menu.NONE, "Usuarios").setIcon(R.drawable.belll).setCheckable(true);
+           // menu.add(R.id.grupo1,item_configuracion1,Menu.NONE, "Configuración").setIcon(R.drawable.settings).setCheckable(true);
+        }
+
+
+
+
+        tvNombreHeader=(TextView)navigationView.getHeaderView(0).findViewById(R.id.tvNameHeader);
+        tvNombreHeader.setText(usuario.getNombre());
+        tvEmailHeader=(TextView) navigationView.getHeaderView(0).findViewById(R.id.tvEmailHeader);
+        tvEmailHeader.setText(usuario.getEmail());
 
         if (navigationView != null) {
             prepararDrawer(navigationView);
             // Seleccionar item por defecto
             seleccionarItem(navigationView.getMenu().getItem(0));
         }
+        String refreshedToken = FirebaseInstanceId.getInstance().getToken();
+        Log.d("token", "Refreshed token: " + refreshedToken);
+        usuario.setToken(refreshedToken);
+
+        sendRegistrationToServer(usuario);
+        startService(new Intent(this, MyFirebaseMessagingService.class));
+
+    }
+
+    private void sendRegistrationToServer(Usuario  user) {
+        final RestInterface restInterface= RestClientBuilder.restInterface();
+
+        restInterface.updateUser(user,  new Callback<Usuario>() {
+            @Override
+            public void success(Usuario usuario, Response response) {
+                Log.e("tokenupdated", usuario.getToken());
+
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+                Log.e("fallo1", error.getMessage());
+            }
+        });
+        //final String token = user.getToken();
+        //final String message ="mensaje de prueba app to app";
+        // NotificationSender.sendNotification(token, message);
     }
 
     private void prepararDrawer(NavigationView navigationView) {
@@ -62,36 +126,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void seleccionarItem(MenuItem itemDrawer) {
-        FragmentoCuenta fragmentoCuenta = null;
-        ListSolicitudesFragment fragmentoSolicitud = null;
-        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentoTabs fragmentoTabs = null;
+        ListSolicitudesFragmentPend fragmentoSolicitud = null;
 
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        boolean valor=false;
         switch (itemDrawer.getItemId()) {
 
-            case R.id.item_cuenta:
-                fragmentoCuenta = new FragmentoCuenta();
+            case item_cuenta1:
+                valor=true;
+                fragmentoTabs = new FragmentoTabs();
                 break;
-           case R.id.item_solicitudes:
-                getIntent().putExtra("Usuario",usuario);
-                fragmentoSolicitud = new ListSolicitudesFragment();
+           case item_solicitudes1:
+               valor=false;
+                fragmentoTabs = new FragmentoTabs();
                 break;
-          /*  case R.id.item_configuracion:
-                startActivity(new Intent(this, ActividadConfiguracion.class));
-                break;*/
         }
-        if (fragmentoCuenta != null) {
-            fragmentoCuenta.setUserLoged(usuario);
+        if (fragmentoTabs != null) {
+            fragmentoTabs.setUserLoged(usuario);
+            fragmentoTabs.setValor(valor);
             fragmentManager
                     .beginTransaction()
-                    .replace(R.id.main_content, fragmentoCuenta)
+                    .replace(R.id.main_content, fragmentoTabs)
                     .commit();
         }
-        if (fragmentoSolicitud != null) {
+        /*if (fragmentoSolicitud != null) {
             fragmentManager
                     .beginTransaction()
                     .replace(R.id.main_content, fragmentoSolicitud)
                     .commit();
-        }
+        }*/
 
         // Setear título actual
         setTitle(itemDrawer.getTitle());

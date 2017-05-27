@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "782706616166",
-    "firebase_url": "https://proyectocompumovil.firebaseio.com",
-    "project_id": "proyectocompumovil",
-    "storage_bucket": "proyectocompumovil.appspot.com"
+    "project_number": "273489163075",
+    "firebase_url": "https://proyecto-quejatec.firebaseio.com",
+    "project_id": "proyecto-quejatec",
+    "storage_bucket": "proyecto-quejatec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:782706616166:android:0bf85a95a33660a0",
+        "mobilesdk_app_id": "1:273489163075:android:0bf85a95a33660a0",
         "android_client_info": {
           "package_name": "co.edu.udea.quejatec"
         }
       },
       "oauth_client": [
         {
-          "client_id": "782706616166-5iu8d19qlsok15og3npkaqe209qph4et.apps.googleusercontent.com",
+          "client_id": "273489163075-i101ik26d99oo5c265unpcufms6ist0t.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "co.edu.udea.quejatec",
@@ -23,13 +23,13 @@
           }
         },
         {
-          "client_id": "782706616166-qata5u7fviof46qs81b5uh8rmgv14vlh.apps.googleusercontent.com",
+          "client_id": "273489163075-l2f1fj3bkcilbup8cmdjshn3jiikjhr9.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCw8FCQGVW9xq8CwauJtlU9v7V53do_9Uw"
+          "current_key": "AIzaSyD_STAaR2NGj5WFxovpGpZAe-BGMd29txY"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "782706616166-qata5u7fviof46qs81b5uh8rmgv14vlh.apps.googleusercontent.com",
+              "client_id": "273489163075-l2f1fj3bkcilbup8cmdjshn3jiikjhr9.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

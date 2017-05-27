@@ -18,6 +18,9 @@ public class Usuario implements Parcelable {
     @SerializedName("email")
     @Expose
     private String email;
+    @SerializedName("token")
+    @Expose
+    private String token;
     @SerializedName("tipoUsuario")
     @Expose
     private String tipoUsuario;
@@ -33,6 +36,14 @@ public class Usuario implements Parcelable {
     @SerializedName("direccion")
     @Expose
     private String direccion;
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
 
     public String getNombre() {
         return nombre;
@@ -104,6 +115,7 @@ public class Usuario implements Parcelable {
         nombre = in.readString();
         contacto = in.readString();
         email = in.readString();
+        token = in.readString();
         tipoUsuario = in.readString();
         documento = in.readByte() == 0x00 ? null : in.readInt();
         password = in.readString();
@@ -121,6 +133,7 @@ public class Usuario implements Parcelable {
         dest.writeString(nombre);
         dest.writeString(contacto);
         dest.writeString(email);
+        dest.writeString(token);
         dest.writeString(tipoUsuario);
         if (documento == null) {
             dest.writeByte((byte) (0x00));

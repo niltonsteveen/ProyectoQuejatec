@@ -2,7 +2,7 @@
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="120dp"
+    android:layout_height="200dp"
     card_view:cardCornerRadius="4dp"
     card_view:cardElevation="4dp"
     card_view:cardUseCompatPadding="true">
@@ -12,19 +12,49 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imagen"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:layout_marginRight="15dp"/>
+        <RelativeLayout
+            android:layout_marginRight="16dp"
+            android:id="@+id/layoutImg"
+            android:layout_width="110dp"
+            android:layout_height="match_parent">
+                <android.support.v7.widget.CardView
+                    android:layout_width="100dp"
+                    android:id="@+id/cardImg"
+                    android:layout_height="100dp"
+                    card_view:cardCornerRadius="50dp"
+                    android:layout_centerInParent="true">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/tvLetterCardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="50dp"
+                            android:layout_centerInParent="true"
+                            android:textColor="@color/letter"/>
 
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+        </RelativeLayout>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="Small Text"
             android:id="@+id/descripcion"
-            android:layout_toRightOf="@id/imagen"/>
+            android:layout_toRightOf="@id/layoutImg"/>
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/verSol"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/accent2"
+            android:layout_below="@+id/descripcion"
+            android:layout_toRightOf="@+id/layoutImg"
+            android:gravity="bottom|right"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
     </RelativeLayout>
 </android.support.v7.widget.CardView>
