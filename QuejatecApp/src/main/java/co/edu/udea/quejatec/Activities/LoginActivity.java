@@ -1,6 +1,7 @@
 package co.edu.udea.quejatec.Activities;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -9,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import co.edu.udea.quejatec.Model.RestInterface;
 import co.edu.udea.quejatec.Model.Usuario;
@@ -25,6 +29,10 @@ public class LoginActivity extends AppCompatActivity {
     EditText etPassword;
     Button btnIngresar;
     String url= "https://apirest-proyecto-quejatec.herokuapp.com/api";
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private String token;
+    private Usuario usuario1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,14 +66,12 @@ public class LoginActivity extends AppCompatActivity {
                         public void success(Usuario usuario, Response response) {
                             if(!usuario.getPassword().equals(etPassword.getText().toString())){
                                 Toast.makeText(getBaseContext(), "Contraseña incorrecta",Toast.LENGTH_LONG).show();
-                            }else{
+                            }else {
 
-                                Intent intent=new Intent(LoginActivity.this, MainActivity.class);
-                                intent.putExtra("Usuario",usuario);
+                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                intent.putExtra("Usuario", usuario);
                                 startActivity(intent);
-
                             }
-
                         }
 
                         @Override
@@ -94,4 +100,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         return res;
     }
+
+
 }

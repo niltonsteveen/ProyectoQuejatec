@@ -8,6 +8,10 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.iid.FirebaseInstanceId;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import co.edu.udea.quejatec.Model.RestInterface;
