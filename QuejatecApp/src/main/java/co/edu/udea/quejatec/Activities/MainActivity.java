@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private static final int item_solicitudes1= 3;
     private static final int item_configuracion1= 4;
     private static final int item_usuarios1= 5;
+    private static final int item_logout1= 6;
 
 
     public MainActivity(){}
@@ -62,10 +63,13 @@ public class MainActivity extends AppCompatActivity {
             menu.add(R.id.grupo1,item_cuenta1,Menu.NONE, "Perfil").setIcon(R.drawable.account).setCheckable(true);
             menu.add(R.id.grupo1,item_solicitudes1,Menu.NONE, "Solicitudes").setIcon(R.drawable.belll).setCheckable(true);
             menu.add(R.id.grupo1,item_configuracion1,Menu.NONE, "Configuración").setIcon(R.drawable.settings).setCheckable(true);
+            menu.add(R.id.grupo1,item_logout1,Menu.NONE, "Cerrar Sesión").setIcon(R.drawable.account_off).setCheckable(true);
+
         }else{
             menu.add(R.id.grupo2,item_solicitudes1,Menu.NONE, "Solicitudes").setChecked(true).setIcon(R.drawable.home).setCheckable(true);
             menu.add(R.id.grupo2,item_cuenta1,Menu.NONE, "Perfil").setIcon(R.drawable.account).setCheckable(true);
             menu.add(R.id.grupo2,item_usuarios1,Menu.NONE, "Usuarios").setIcon(R.drawable.belll).setCheckable(true);
+            menu.add(R.id.grupo1,item_logout1,Menu.NONE, "Cerrar Sesión").setIcon(R.drawable.account_off).setCheckable(true);
            // menu.add(R.id.grupo1,item_configuracion1,Menu.NONE, "Configuración").setIcon(R.drawable.settings).setCheckable(true);
         }
 
