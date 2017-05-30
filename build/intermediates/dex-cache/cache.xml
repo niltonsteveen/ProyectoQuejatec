@@ -2,20 +2,21 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\edf69f10f7c16b27877b3888884e7668a1f72e7f\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="30a4938ea5235ccf532b3e9f04200e68547e36ad">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_7363ccb0149fa241278a2131f278096d64c73b8e.jar" />
+        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_45e397d89ccef120de15683f1f8eb1f60d016eaa\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\9a7f6c7d68ccdf0a20332c6e51e8602c0f69fcba\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\8b6186731157c50c7474368bd108b61fa5361b95\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
+<<<<<<< HEAD
         sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
         <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_fe389020cb062f63b8f569a7cbc5ef481718ed6b.jar" />
     </item>
@@ -72,224 +73,112 @@
         revision="25.0.2"
         sha1="152de8da301561dcb0946471697a420d8f7a68c5">
         <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_59c8eb74a728a81056b91a0079a3be3d62dba53d.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit\retrofit\1.9.0\a681c044244d9fc375198588297a39ba78028423\retrofit-1.9.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a681c044244d9fc375198588297a39ba78028423">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\retrofit-1.9.0_68ca71366c3d5eb9b78669af88b7cec2e3933150.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.4.0\5b72bf48563ea8410e650de14aa33ff69a3e8c35\okio-1.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5b72bf48563ea8410e650de14aa33ff69a3e8c35">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\okio-1.4.0_042e126af99737bbc3f81ae0be359d7e6f7260aa.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\9e5207518b117c6317fe1ed926ebad111b33974f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_4af2c2b9cf2ce093eec3ed43c4e3bae38ad555c4.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\3bf78610da60a4c8da8cf7c0a7b90dd2e59ccd6f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_4feff741bc084512c22fdf786fc2c3b4f8ec39f9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\89d134e02715f5de07bbf1831da7358f1e5256de\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_94a82999649031dc7c96d5da950ec5633304bcd3.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\51fc27ff039b7bbb98de346f82643b072014f9ac\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_422f989868160affa55c273648fe4b2ab9192f49.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\d05cfebe08de7026e37edde856d9cd3d2847cfee\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_67d94d6db224ec0543406b76acf0cd86a12d605f.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\gson-2.3.1_53c55e7c71fb07b8b20022918e0df51cab02dd22.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\c8e5c7885d5ec9b5d48335ba420171aea1a0edb5\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
+=======
         sha1="888983f51cf34f57a93ff16832552f2f15937212">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_461140d02b984a567b2cc7f855f9af76e6fe4bce.jar" />
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_289a68b4c8c0a4c62884f84b1dba481fbbe7bea5\classes.dex" />
+>>>>>>> 88bf670d2908dba56ca923f039072500d9abdd59
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\18f17c30c91914120a02fbe9f94d2422f303dec6\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="12032271e6be735e811ad529cb08ff066c381640">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_f6156f8d0da1e1a8b174789fdbdc54d8cff24204.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\375db05418edf100d84d5de889755c34053ab708\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\50abdbb4bd5005736de591a972574efd445fd55f\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_b2ab1c114e81cea5a1aaa19794ea94171fda4c6b.jar" />
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_04d80d28c3e67222f47fa10cd4118a8d93ce9537\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\ee3e7607094f59ba05707682e48483e48ffcd5b3\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\67044f98316e18712135d4da91cda29f776fa013\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="12032271e6be735e811ad529cb08ff066c381640">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_5676d8c0fc4895c253c61392becaedbf13d55fa7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9317027f5bc23ac3fae2e156b4433305da1751e0">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_3bca45a69f19fd510f3a6e78255546d00b5083b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\98683ab1e52e22507b04a16c7d15d8d36b346044\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_cb1354035d8343410d06251fdf3705c97a69bc2c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\3c0b4022318bfd0c8b0f440832fe121a65a7ac07\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ba45493086c418e5e401e51745747845808f0074\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\942ab63b439ae08c6fd88ad1a4f38e414a0bee27\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_e36b0c5a3a741c77318a3717b3110914f62685d8.jar" />
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_1fee5621e71374445f0565d6d054dfb40d015ae9\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\aeeb0f79f6c589b8009b43514079a2e918dd17ee\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\6a1d7a75186229e4b938fa4a1a7654f69fab1e56\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_8d9494878e1ed88f8ec6bebf592b4986147070b8.jar" />
+        sha1="4b42a61cd5924f28e95894e859e6abe57847e2f3">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_616e8bf54243cfb42fd5cc8a1d5e41721326ccae\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\dc7383ac2819826f44e7e0b37940383f9afe846a\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\69fe9bf8f552bee99075822e96b3effa3581cb3d\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_0ae7049abb4b28ffa0f88f0d296cbb535615e133.jar" />
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_26c6f76986f4691589d18d97d009ca66875065e5\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\f0b1af7156f30e1366f5f45f47a0fb5cc2fb2829\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\9ed6e118731446a6b2a306688068ab6f6138a74b\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_64e863dc712a0ae7af2b47d56160d0edc8d25727.jar" />
+        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_9d457dbf22c150abad7afea9ab5f05c4a8c4149a\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\559d0b10fd66a4d40cb56a082b54e28ee090adb1\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\fb72521fad4cb34281d1f25235214a21ec1561a9\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_9ae83217dd9e3c44072340e308371ebb52be5f90.jar" />
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_dbdefa24d59f4f3006780d93aef7f964e49950e8\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\4601b72244ad00d5cc3f086f3723c3e78f3c5bf9\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\f992321437f2e73e61b45a98b29da0b172393324\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_5dd3ca62ce71abaa40ff67cbb49674f5815946dc.jar" />
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_fb8a1373718812e9a9dc37e7c2108bcd7fed87ee\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\support-annotations-25.2.0_c3e056a218a04509af124591a7f7f8b548641bea.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\02a7a06006328c70018e33b9e4359b24b226a2ec\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ea6a989b83d19b1b461281e0475a6cd6514897f8">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_09022719166abf24fbdc176462651eb0197eab37.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\8ed1778955bd90a31e94fb8a9746050a00509c69\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_41bc4592574dadae4fb2d783cf92e1947a4add72.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.gradle\caches\modules-2\files-2.1\org.jbundle.util.osgi.wrapped\org.jbundle.util.osgi.wrapped.org.apache.http.client\4.1.2\98c86e42679fe7ac066f6c242e0d14f0bce0bb7c\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="98c86e42679fe7ac066f6c242e0d14f0bce0bb7c">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\org.jbundle.util.osgi.wrapped.org.apache.http.client-4.1.2_313db2ec7f025250b91574c6186ee22295999297.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\5dda2cc076a7fd904e879814a0f80448702f865f\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_2d209ed77bfed94e8f8e2e43f25fe8c868eaba10.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\27fa7c5b5b5324f2c76a4ba8e54f100815d7dbe3\output\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_24debb3a5849a80d86db7c7a6d3bd1b4fd1cda26.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp\okhttp\2.4.0\40340c0748190fe897baf7bffbc1b282734294e5\okhttp-2.4.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.2"
-        sha1="40340c0748190fe897baf7bffbc1b282734294e5">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\okhttp-2.4.0_0cd7f61cabba65d2dab7ce5cea7b20085e76b93f.jar" />
-    </item>
-    <item
+<<<<<<< HEAD
         is-multidex="false"
         jar="C:\Users\nilto\.android\build-cache\4b8bff53fc9fea0ca3fd4f24aecba16719c47070\output\jars\classes.jar"
         jumboMode="false"
@@ -302,19 +191,24 @@
         is-multidex="false"
         jar="C:\Users\nilto\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
         jumboMode="false"
+=======
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\b39353c3925c243c87839e435c72678d591e5a81\output\jars\classes.jar"
+        jumboMode="true"
+>>>>>>> 88bf670d2908dba56ca923f039072500d9abdd59
         optimize="true"
         revision="25.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\picasso-2.5.2_e14a8e3850cfabc3117d68ddd24d0bbe595bdfc5.jar" />
+        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_ce3cd76e738e46d5c2d9570fa594d42076a41809\classes.dex" />
     </item>
     <item
-        is-multidex="false"
-        jar="C:\Users\nilto\.android\build-cache\86fa2867c98539ffceaec7a2b87067603a430fc7\output\jars\classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="C:\Users\Jesus Gomez\.android\build-cache\f0473eee181d1f050cf5b66bdaed1c2aa89cfbb1\output\jars\classes.jar"
+        jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
-        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_2c709f97241dc1b3f8a00a2d32d34b5e3d9e09a2.jar" />
+        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
+        <dex dex="C:\Users\Jesus Gomez\Documents\GitHub\ProyectoQuejatec\QuejatecApp\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0583e622c48f0b219c24b3342a7e37a335285439\classes.dex" />
     </item>
 
 </items>
