@@ -111,13 +111,15 @@ public class SolicitudRespuesta extends Fragment {
                 restInterface.updateSolicitud(solicitud, new Callback<Solicitud>() {
                     @Override
                     public void success(Solicitud solicitud, Response response) {
+                        Bundle arguments=new Bundle();
+                        arguments.putParcelable("Usuario",user);
+                        ListSolicitudesFragmentPend fragmentoSolicitud= ListSolicitudesFragmentPend.newInstance(arguments);
                         FragmentManager fragmentManager=getFragmentManager();
-                        ListSolicitudesFragmentPend listSolicitudesFragmentPend =new ListSolicitudesFragmentPend();
-                        enviarNotificacion(user,solicitud);
+                        enviarNotificacion(solicitud.getUsuario(),solicitud);
                         Toast.makeText(getContext(), "Solicitud respondida correctamente",Toast.LENGTH_LONG).show();
                         fragmentManager
                                 .beginTransaction()
-                                .replace(R.id.main_content, listSolicitudesFragmentPend)
+                                .replace(R.id.main_content, fragmentoSolicitud)
                                 .commit();
                     }
 
@@ -133,8 +135,22 @@ public class SolicitudRespuesta extends Fragment {
         return view;
     }
 
-    private void enviarNotificacion(Usuario usuario, Solicitud solicitud) {
-        String msg="Tu solicitud "+ solicitud.getId()+ "ha sido respondida";
-        NotificationSender.sendNotification(usuario.getToken(),msg);
+    private void enviarNotificacion(String usr, final Solicitud solicitud) {
+        RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(url).build();
+        final RestInterface restInterface=restAdapter.create(RestInterface.class);
+
+        restInterface.getUserById(usr, new Callback<Usuario>() {
+            @Override
+            public void success(Usuario usuario, Response response) {
+                String msg="Tu solicitud "+ solicitud.getId()+ "ha sido respondida";
+                NotificationSender.sendNotification(usuario.getToken(),msg);
+            }
+
+            @Override
+            public void failure(RetrofitError error) {
+                error.printStackTrace();
+            }
+        });
+
     }
 }

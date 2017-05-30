@@ -31,6 +31,8 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.Soli
     private Context context;
     FragmentManager fragmentManager;
     boolean esEmpleado;
+    boolean estaOk;
+
     public static class SolicitudViewHolder extends RecyclerView.ViewHolder {
         // Campos respectivos de un item
         public TextView imagen;
@@ -51,11 +53,12 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.Soli
         }
     }
 
-    public SolicitudAdapter(List<Solicitud> items, Context context, FragmentManager fragmentManager, boolean esEmpleado) {
+    public SolicitudAdapter(List<Solicitud> items, Context context, FragmentManager fragmentManager, boolean esEmpleado, boolean ok) {
         this.items = items;
         this.context=context;
         this.fragmentManager=fragmentManager;
         this.esEmpleado=esEmpleado;
+        this.estaOk=ok;
     }
 
     @Override
@@ -86,7 +89,11 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.Soli
         }
         viewHolder.descripcion.setText(items.get(i).getDescripcion());
         if(esEmpleado){
-            viewHolder.verSol.setText("VER SOLICITUD");
+            if(!this.estaOk){
+                viewHolder.verSol.setText("VER SOLICITUD");
+            }else{
+                viewHolder.verSol.setVisibility(viewHolder.view.GONE);
+            }
             viewHolder.verSol.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -100,7 +107,11 @@ public class SolicitudAdapter extends RecyclerView.Adapter<SolicitudAdapter.Soli
                 }
             });
         }else{
-            viewHolder.verSol.setText("RESPONDER");
+            if(!this.estaOk){
+                viewHolder.verSol.setText("RESPONDER");
+            }else{
+                viewHolder.verSol.setVisibility(viewHolder.view.GONE);
+            }
             viewHolder.verSol.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

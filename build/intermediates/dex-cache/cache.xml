@@ -39,6 +39,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\nilto\.android\build-cache\98e9388ca4c00f419f9abf3656aca39542534dac\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_b93c1890e22f8c04a102d202b684dbadc6aa3a4a.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\nilto\.android\build-cache\2b95703c701583604aacf99899a153451f184fe4\output\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -279,6 +288,15 @@
         revision="25.0.2"
         sha1="40340c0748190fe897baf7bffbc1b282734294e5">
         <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\okhttp-2.4.0_0cd7f61cabba65d2dab7ce5cea7b20085e76b93f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\nilto\.android\build-cache\4b8bff53fc9fea0ca3fd4f24aecba16719c47070\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="C:\Users\nilto\Desktop\CompumovilFinal\ProyectoQuejatec\QuejatecApp\build\intermediates\pre-dexed\debug\classes_7df9b6d459fb115ed57fb422003032cfb8445fcb.jar" />
     </item>
     <item
         is-multidex="false"

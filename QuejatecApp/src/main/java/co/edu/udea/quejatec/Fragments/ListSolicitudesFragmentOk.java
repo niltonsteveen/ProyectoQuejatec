@@ -103,7 +103,7 @@ public class ListSolicitudesFragmentOk extends Fragment {
                     recycler.setHasFixedSize(true);
                     lManager = new LinearLayoutManager(getContext());
                     recycler.setLayoutManager(lManager);
-                    adapter = new SolicitudAdapter(usuarios, getContext(), fragmentManager, true);
+                    adapter = new SolicitudAdapter(usuarios, getContext(), fragmentManager, true, true);
                     recycler.setAdapter(adapter);
                 }
 
@@ -118,11 +118,18 @@ public class ListSolicitudesFragmentOk extends Fragment {
             restInterface.getSolicitudes(new Callback<List<Solicitud>>() {
                 @Override
                 public void success(List<Solicitud> solicituds, Response response) {
+                    List solicitudes = new ArrayList();
+                    for (int i = 0; i < solicituds.size(); i++) {
+                        if (solicituds.get(i).getRespuesta()!=null) {
+                            solicitudes.add(solicituds.get(i));
+                        }
+                    }
+
                     recycler = (RecyclerView) view.findViewById(R.id.reciclador1);
                     recycler.setHasFixedSize(true);
                     lManager = new LinearLayoutManager(getContext());
                     recycler.setLayoutManager(lManager);
-                    adapter = new SolicitudAdapter(solicituds, getContext(), fragmentManager, false);
+                    adapter = new SolicitudAdapter(solicitudes, getContext(), fragmentManager, false,true);
                     recycler.setAdapter(adapter);
                 }
 

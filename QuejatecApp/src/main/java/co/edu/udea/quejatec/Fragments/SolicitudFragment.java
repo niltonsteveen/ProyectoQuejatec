@@ -57,6 +57,8 @@ public class SolicitudFragment extends Fragment {
 
         Bundle extras=getArguments();
         user=extras.getParcelable("Usuario");
+
+      //  System.out.println(user.getNombre()+"--------********---------------*******------------------");
         RestAdapter restAdapter = new RestAdapter.Builder().setEndpoint(url).build();
         final RestInterface restInterface=restAdapter.create(RestInterface.class);
 
@@ -113,12 +115,15 @@ public class SolicitudFragment extends Fragment {
                     @Override
                     public void success(Solicitud solicitud, Response response) {
                         Toast.makeText(getContext(), "Solicitud creada correctamente",Toast.LENGTH_LONG).show();
-                        ListSolicitudesFragmentPend sFragment=new ListSolicitudesFragmentPend();
+                        //ListSolicitudesFragmentPend sFragment=new ListSolicitudesFragmentPend();
+                        Bundle arguments=new Bundle();
+                        arguments.putParcelable("Usuario",user);
+                        ListSolicitudesFragmentPend fragmentoSolicitud= ListSolicitudesFragmentPend.newInstance(arguments);
 
                         FragmentManager fragmentManager=getFragmentManager();
                         fragmentManager
                                 .beginTransaction()
-                                .replace(R.id.main_content, sFragment)
+                                .replace(R.id.main_content, fragmentoSolicitud)
                                 .commit();
                     }
 

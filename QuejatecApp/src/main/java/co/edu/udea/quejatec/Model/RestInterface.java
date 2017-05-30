@@ -38,5 +38,8 @@ public interface RestInterface {
     @GET("/solicitudes")
     void getSolicitudes(Callback<List<Solicitud>> cb) ;
 
+    @GET("/noticias")
+    void getNoticias(Callback<List<Noticia>> cb) ;
+
 
 }

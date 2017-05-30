@@ -85,6 +85,7 @@ public class ListSolicitudesFragmentPend extends Fragment {
         final RestInterface restInterface=restAdapter.create(RestInterface.class);
         Bundle extras=getArguments();
         usuario=extras.getParcelable("Usuario");
+       // System.out.println(usuario.getNombre()+"--------------******************---------------------------");
         fragmentManager=getFragmentManager();
 
         if(usuario.getTipoUsuario().equals("1")) {
@@ -103,7 +104,7 @@ public class ListSolicitudesFragmentPend extends Fragment {
                     recycler.setHasFixedSize(true);
                     lManager = new LinearLayoutManager(getContext());
                     recycler.setLayoutManager(lManager);
-                    adapter = new SolicitudAdapter(usuarios, getContext(), fragmentManager, true);
+                    adapter = new SolicitudAdapter(usuarios, getContext(), fragmentManager, true, false);
                     recycler.setAdapter(adapter);
                 }
 
@@ -116,13 +117,22 @@ public class ListSolicitudesFragmentPend extends Fragment {
 
         }else{
             restInterface.getSolicitudes(new Callback<List<Solicitud>>() {
+
+
                 @Override
                 public void success(List<Solicitud> solicituds, Response response) {
+                    List solicitudes = new ArrayList();
+                    for (int i = 0; i < solicituds.size(); i++) {
+                        if (solicituds.get(i).getRespuesta()==null) {
+                            solicitudes.add(solicituds.get(i));
+                        }
+                    }
+
                     recycler = (RecyclerView) view.findViewById(R.id.reciclador1);
                     recycler.setHasFixedSize(true);
                     lManager = new LinearLayoutManager(getContext());
                     recycler.setLayoutManager(lManager);
-                    adapter = new SolicitudAdapter(solicituds, getContext(), fragmentManager, false);
+                    adapter = new SolicitudAdapter(solicitudes, getContext(), fragmentManager, false,false);
                     recycler.setAdapter(adapter);
                 }
 
