@@ -1,6 +1,8 @@
 package co.edu.udea.quejatec.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
@@ -22,6 +24,7 @@ import co.edu.udea.quejatec.Model.RestInterface;
 import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
 import co.edu.udea.quejatec.utils.MyFirebaseMessagingService;
+import co.edu.udea.quejatec.utils.PreFragConf;
 import co.edu.udea.quejatec.utils.RestClientBuilder;
 import retrofit.Callback;
 import retrofit.RetrofitError;
@@ -142,8 +145,20 @@ public class MainActivity extends AppCompatActivity {
                 fragmentoTabs = new FragmentoTabs();
                 break;
            case item_solicitudes1:
-               valor=false;
+                valor=false;
                 fragmentoTabs = new FragmentoTabs();
+                break;
+            case item_configuracion1:
+                getFragmentManager().beginTransaction().replace(R.id.main_content, new PreFragConf()).commit();
+                break;
+            case item_logout1:
+                SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putBoolean("sesion_activa",false);
+                editor.commit();
+                Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
+                finish();
                 break;
         }
         if (fragmentoTabs != null) {
