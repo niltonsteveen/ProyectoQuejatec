@@ -20,6 +20,7 @@ import com.google.firebase.iid.FirebaseInstanceId;
 
 import co.edu.udea.quejatec.Fragments.FragmentoTabs;
 import co.edu.udea.quejatec.Fragments.ListSolicitudesFragmentPend;
+import co.edu.udea.quejatec.Fragments.eventos;
 import co.edu.udea.quejatec.Model.RestInterface;
 import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
@@ -142,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
     private void seleccionarItem(MenuItem itemDrawer) {
         FragmentoTabs fragmentoTabs = null;
         ListSolicitudesFragmentPend fragmentoSolicitud = null;
+        eventos eventos=null;
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         boolean valor=false;
@@ -167,6 +169,10 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
                 break;
+            case item_inicio1:
+                eventos=new eventos();
+
+
         }
         if (fragmentoTabs != null) {
             fragmentoTabs.setUserLoged(usuario);
@@ -174,6 +180,11 @@ public class MainActivity extends AppCompatActivity {
             fragmentManager
                     .beginTransaction()
                     .replace(R.id.main_content, fragmentoTabs)
+                    .commit();
+        }
+
+        if(eventos!=null){
+            getFragmentManager().beginTransaction().replace(R.id.main_content, eventos)
                     .commit();
         }
         /*if (fragmentoSolicitud != null) {
