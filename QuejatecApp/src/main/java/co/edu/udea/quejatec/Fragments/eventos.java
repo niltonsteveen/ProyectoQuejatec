@@ -1,13 +1,12 @@
 package co.edu.udea.quejatec.Fragments;
 
-import android.app.Fragment;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,22 +16,12 @@ import java.util.List;
 import co.edu.udea.quejatec.Model.Noticia;
 import co.edu.udea.quejatec.Model.RestInterface;
 import co.edu.udea.quejatec.R;
-import co.edu.udea.quejatec.utils.AdaptadorRv;
-import co.edu.udea.quejatec.utils.NoticiasPojo;
+import co.edu.udea.quejatec.utils.NoticiasAdapter;
 import retrofit.Callback;
 import retrofit.RestAdapter;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
-
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link eventos.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link eventos#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class eventos extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -46,6 +35,7 @@ public class eventos extends Fragment {
     private RecyclerView recycler;
     private RecyclerView.Adapter adapter;
     private RecyclerView.LayoutManager lManager;
+    FragmentManager fragmentManager=getFragmentManager();
     String url= "https://apirest-proyecto-quejatec.herokuapp.com/api";
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -85,7 +75,7 @@ public class eventos extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_event, container, false);
+        final View view = inflater.inflate(R.layout.fragment_event, container, false);
 
         rv = (RecyclerView)view.findViewById(R.id.reciclador);
         rv.setHasFixedSize(true);
@@ -95,7 +85,14 @@ public class eventos extends Fragment {
         restInterface.getNoticias(new Callback<List<Noticia>>() {
             @Override
             public void success(List<Noticia> noticias, Response response) {
-                
+
+
+                recycler = (RecyclerView) view.findViewById(R.id.reciclador);
+                recycler.setHasFixedSize(true);
+                lManager = new LinearLayoutManager(getContext());
+                recycler.setLayoutManager(lManager);
+                adapter = new NoticiasAdapter(noticias, getContext(), fragmentManager);
+                recycler.setAdapter(adapter);
             }
 
             @Override
@@ -103,28 +100,6 @@ public class eventos extends Fragment {
 
             }
         });
-
-        LinearLayoutManager llm = new LinearLayoutManager(container.getContext());
-        rv.setLayoutManager(llm);
-
-        AdaptadorRv adaptador = new AdaptadorRv(listaEventos);
-
-        adaptador.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fragment = null;
-                MostrarEven frag = new MostrarEven();
-                frag.setEventos(listaEventos1);
-                frag.setSelected(rv.getChildAdapterPosition(v));
-                fragment = frag;
-                getFragmentManager().beginTransaction().replace(R.id.main_content,fragment).commit();
-                Log.i("DemoRecView", "Pulsado el elemento " + rv.getChildAdapterPosition(v));
-            }
-        });
-
-        rv.setAdapter(adaptador);
-
-
         return view;
     }
 

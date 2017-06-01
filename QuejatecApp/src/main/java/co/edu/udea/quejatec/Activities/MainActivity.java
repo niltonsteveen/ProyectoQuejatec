@@ -184,7 +184,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(eventos!=null){
-            getFragmentManager().beginTransaction().replace(R.id.main_content, eventos)
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, eventos)
                     .commit();
         }
         /*if (fragmentoSolicitud != null) {
