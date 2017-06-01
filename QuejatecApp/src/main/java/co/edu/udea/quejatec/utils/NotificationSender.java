@@ -16,9 +16,7 @@ import org.json.JSONObject;
  */
 
 public class NotificationSender {
-
     private static final String LEGACY_SERVER_KEY= "AAAAP605c0M:APA91bGmQ7ra7Mm5ocOlFQW1XPVfi4IE69MWoOyg88KJDoEL6oe4M7liEI2lKhCl8784sqeNyTD4BOIoy_-0bUV9AuyoqADYlEGvyTUu1F3wVciVQ8FYeE6gShbdwro9RFpUZDKxYuuA";
-
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
     public static void sendNotification(final String reg_token, final String message) {
@@ -30,7 +28,7 @@ public class NotificationSender {
                     JSONObject json = new JSONObject();
 
                     JSONObject dataJson = new JSONObject();
-                    dataJson.put("Duke", "Duke");
+                  //  dataJson.put("Duke", "Duke");
                     dataJson.put("sound", "default");
                     dataJson.put("body", message);
                     dataJson.put("title", "Quejatec Notification");

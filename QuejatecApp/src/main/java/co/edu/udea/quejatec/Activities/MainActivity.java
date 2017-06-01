@@ -23,6 +23,7 @@ import co.edu.udea.quejatec.Model.Usuario;
 import co.edu.udea.quejatec.R;
 import co.edu.udea.quejatec.utils.MyFirebaseMessagingService;
 import co.edu.udea.quejatec.utils.RestClientBuilder;
+import de.hdodenhof.circleimageview.CircleImageView;
 import retrofit.Callback;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private Usuario usuario;
     private TextView tvEmailHeader;
+    private CircleImageView circleImageView;
     private TextView tvNombreHeader;
     private static final int item_inicio1= 1;
     private static final int item_cuenta1= 2;
@@ -75,7 +77,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        circleImageView=(CircleImageView) navigationView.getHeaderView(0).findViewById(R.id.imgPerfilCir);
+        if(!usuario.getTipoUsuario().equals("1")){
+            circleImageView.setImageResource(R.drawable.usuario_u);
+        }else{
+            circleImageView.setImageResource(R.drawable.user_2);
+        }
         tvNombreHeader=(TextView)navigationView.getHeaderView(0).findViewById(R.id.tvNameHeader);
         tvNombreHeader.setText(usuario.getNombre());
         tvEmailHeader=(TextView) navigationView.getHeaderView(0).findViewById(R.id.tvEmailHeader);
